@@ -1,4 +1,4 @@
-package ir.mjkhaani.recipeapp
+package ir.mjkhaani.recipeapp.persentation.ui.recipeList
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,9 +13,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import dagger.hilt.android.AndroidEntryPoint
+import ir.mjkhaani.recipeapp.R
 
+@AndroidEntryPoint
 class RecipeListFragment : Fragment(){
+    val viewModel:RecipeListViewModel by viewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

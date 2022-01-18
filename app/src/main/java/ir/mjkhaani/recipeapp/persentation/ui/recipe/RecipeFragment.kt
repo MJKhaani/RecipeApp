@@ -1,4 +1,4 @@
-package ir.mjkhaani.recipeapp
+package ir.mjkhaani.recipeapp.persentation.ui.recipe
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,7 +23,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
+import dagger.hilt.android.AndroidEntryPoint
+import ir.mjkhaani.recipeapp.R
 
+@AndroidEntryPoint
 class RecipeFragment : Fragment() {
 
     override fun onCreateView(
