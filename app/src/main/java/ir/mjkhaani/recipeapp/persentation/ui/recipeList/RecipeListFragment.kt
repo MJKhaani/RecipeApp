@@ -20,7 +20,7 @@ import ir.mjkhaani.recipeapp.R
 
 @AndroidEntryPoint
 class RecipeListFragment : Fragment(){
-    val viewModel:RecipeListViewModel by viewModels()
+    //val viewModel:RecipeListViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
