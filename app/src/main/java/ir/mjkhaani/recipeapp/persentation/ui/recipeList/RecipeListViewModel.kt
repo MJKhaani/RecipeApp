@@ -22,8 +22,18 @@ constructor(
     val recipes: MutableState<List<Recipe>> = mutableStateOf(listOf())
 
     init {
+        newSearch()
+    }
+
+
+    private fun newSearch() {
         viewModelScope.launch {
-            val result = repository.search(token = token, page = 1, query = "Chicken")
+            val result = repository
+                .search(
+                    token = token,
+                    page = 1,
+                    query = "Chicken"
+                )
             recipes.value = result
         }
     }
