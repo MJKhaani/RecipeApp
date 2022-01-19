@@ -20,7 +20,7 @@ import ir.mjkhaani.recipeapp.R
 
 @AndroidEntryPoint
 class RecipeListFragment : Fragment(){
-    //val viewModel:RecipeListViewModel by viewModels()
+    private val viewModel:RecipeListViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,9 +29,12 @@ class RecipeListFragment : Fragment(){
     ): View {
         return ComposeView(requireContext()).apply {
             setContent {
+                val recipes = viewModel.recipes.value
+
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Text(text = "Hello Flagment")
+                    Text(text = "Hello Fragment")
                     Spacer(modifier = Modifier.padding(10.dp))
+                    Text(text = "Total count: ${recipes.count()}")
                     Button(onClick = {
                         findNavController().navigate(R.id.action_recipeListFragment_to_recipeFragment)
                     }) {
