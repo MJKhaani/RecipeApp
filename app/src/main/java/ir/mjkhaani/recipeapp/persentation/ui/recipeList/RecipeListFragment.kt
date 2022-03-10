@@ -38,8 +38,6 @@ class RecipeListFragment : Fragment(){
                         Text(text = "Go to recipe Fragment")
                     }
                 }
-
-
             }
         }
     }
